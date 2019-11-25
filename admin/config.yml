@@ -8,5 +8,6 @@ collections:
     label: "Image"
     folder: "/"
     create: true
-    files: "img"
+    files: 
+      - "image.hbs"
 
