@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: headwrapper.hbs
 title: First blog test
 date: 2019-11-25T21:40:22.969Z
 thumbnail: /img/parrot.gif
