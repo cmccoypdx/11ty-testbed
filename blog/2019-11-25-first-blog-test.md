@@ -1,5 +1,5 @@
 ---
-layout: headwrapper.hbs
+layout: blog
 title: First blog test
 date: 2019-11-25T21:40:22.969Z
 thumbnail: /img/parrot.gif
@@ -16,7 +16,7 @@ some _paragraph_ **text**
     * formats
     1. here
 
-plus a [link](google.com) 
+plus a [link](https://www.google.com) 
 
 and an image 
 
