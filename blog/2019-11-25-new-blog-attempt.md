@@ -6,3 +6,7 @@ thumbnail: /img/myrtle.jpeg
 rating: 5
 ---
 lorem ipsum
+
+
+
+![myrtle](/img/myrtle.jpeg "persona image")
