@@ -1,0 +1,44 @@
+---
+layout: headwrapper.hbs
+tags: image
+pagination:
+  data: images
+  size: 1
+permalink: "image/{{ fileSlug pagination.items.[0] }}/index.html"
+title: Archive
+---
+<h1>{{ title }}</h1>
+
+<nav aria-labelledby="my-pagination">
+  <h2 id="my-pagination">This is my Pagination</h2>
+  {{#each pagination.items }}
+    <img src="/img/{{ this }}">
+  {{/each}}
+  <ol>
+    <li>
+      {{#compare page.url "!=" pagination.firstPageHref }}
+        <a href="{{ pagination.firstPageHref }}">First</a>
+      {{else }}First{{/compare}}
+    </li>
+    <li>
+      {{#if pagination.previousPageHref }}
+        <a href="{{ pagination.previousPageHref }}">Previous</a>
+      {{else }}Previous{{/if}}
+    </li>
+    {{#each pagination.hrefs }}
+      <li>
+        <a href="{{ this }}"{{#compare page.url "==" this }} aria-current="page"{{/compare}}>{{#fileSlugPaired}}{{ lookup ../images @index }}{{/fileSlugPaired}}</a>
+      </li>
+    {{/each}}
+    <li>
+      {{#if pagination.nextPageHref }}
+        <a href="{{ pagination.nextPageHref }}">Next</a>
+      {{else }}Next{{/if}}
+    </li>
+    <li>
+      {{#compare page.url "!=" pagination.lastPageHref }}
+        <a href="{{ pagination.lastPageHref }}">Last</a>
+      {{else }}Last{{/compare}}
+    </li>    
+  </ol>
+</nav>
