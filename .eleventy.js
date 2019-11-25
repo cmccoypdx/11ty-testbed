@@ -8,6 +8,7 @@ module.exports = (eleventyConfig => {
   })
   eleventyConfig.addPassthroughCopy("img")
   eleventyConfig.addPassthroughCopy("css")
+  eleventyConfig.addPassthroughCopy("admin/config.yml")
   eleventyConfig.addShortcode("plusOne", (num) => {
     return num + 1
   })
