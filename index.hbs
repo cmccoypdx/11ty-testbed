@@ -5,4 +5,15 @@ title: Random Images
 <h1>{{ title }}</h1>
 <div>
   {{{ collections.image.[0].templateContent }}}
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </div>
