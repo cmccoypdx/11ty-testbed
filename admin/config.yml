@@ -8,4 +8,5 @@ collections:
     label: "Image"
     folder: "/"
     create: true
-    
+    files: "img"
+
