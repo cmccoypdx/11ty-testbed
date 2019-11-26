@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - npm i
+  build:
+    commands:
+      - npx @11ty/eleventy
+artifacts:
+  files:
+    - '**/*'
+  base-directory: _site
